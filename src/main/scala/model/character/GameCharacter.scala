@@ -20,16 +20,19 @@ trait GameCharacter {
   val name: String
 
   /** The maximum health points of the character. */
-  val maxHp: Int
+  def maxHp: Int
 
   /** The current health points of the character. */
-  var currentHp: Int
+  def currentHp: Int
+
+  /** Sets the current health points of the character. */
+  def currentHp_=(newHp: Int): Unit
 
   /** The defense of the character. */
-  val defense: Int
+  def defense: Int
 
   /** Sets a scheduled executor to make this character (thread) wait for `speed / 10`
-   *  seconds before adding the character to the queue.
-   */
+    *  seconds before adding the character to the queue.
+    */
   def waitTurn(): Unit
 }

@@ -21,19 +21,19 @@ import java.util.Objects
  */
 class Weapon(val name: String, val damage: Int, val weight: Int, val weaponType: WeaponType) {
 
-  override def equals(o: Any): Boolean = {
-    if (this eq o) {
-      return true
-    }
-    if (!((o.isInstanceOf[Weapon]))) {
-      return false
-    }
-    val weapon: Weapon = o.asInstanceOf[Weapon]
-    return getDamage == weapon.getDamage && getWeight == weapon.getWeight && getName == weapon
-      .getName && (getType eq weapon.getType)
-  }
-
-  override def hashCode: Int = {
-    return Objects.hash(getName, getDamage, getWeight, getType)
-  }
+//  override def equals(o: Any): Boolean = {
+//    if (this eq o) {
+//      return true
+//    }
+//    if (!((o.isInstanceOf[Weapon]))) {
+//      return false
+//    }
+//    val weapon: Weapon = o.asInstanceOf[Weapon]
+//    return getDamage == weapon.getDamage && getWeight == weapon.getWeight && getName == weapon
+//      .getName && (getType eq weapon.getType)
+//  }
+//
+//  override def hashCode: Int = {
+//    return Objects.hash(getName, getDamage, getWeight, getType)
+//  }
 }
