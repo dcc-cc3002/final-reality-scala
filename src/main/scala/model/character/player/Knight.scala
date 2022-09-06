@@ -13,7 +13,18 @@ import model.character.GameCharacter
 import java.util.Objects
 import java.util.concurrent.BlockingQueue
 
-/** @author <a href="https://github.com/r8vnhill">R8V</a>
+/** A `Knight` is a type of [[PlayerCharacter]] that can equip `Sword`s, `Axe`s and `Knife`s.
+  *
+  * @param name
+  *   the character's name
+  * @param maxHp
+  *   the character's maximum health points
+  * @param defense
+  *   the character's defense
+  * @param turnsQueue
+  *   the queue with the characters waiting for their turn
+  *
+  * @author <a href="https://github.com/r8vnhill">R8V</a>
   * @author ~Your name~
   */
 class Knight(
