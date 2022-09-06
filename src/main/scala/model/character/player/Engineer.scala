@@ -13,7 +13,19 @@ import model.character.GameCharacter
 import java.util.Objects
 import java.util.concurrent.BlockingQueue
 
-/** @author <a href="https://github.com/r8vnhill">R8V</a>
+/** An `Engineer` is a type of [[PlayerCharacter]] that can equip `Axe`s and `Bow`s.
+  *
+  * @param name
+  *  the character's name
+  * @param maxHp
+  *  the character's maximum health points
+  * @param defense
+  *  the character's defense
+  * @param turnsQueue
+  *  the queue with the characters waiting for their turn
+  * @constructor Creates a new Engineer.
+  *
+  * @author <a href="https://github.com/r8vnhill">R8V</a>
   * @author ~Your name~
   */
 class Engineer(
@@ -31,5 +43,12 @@ class Engineer(
     case _ => false
   }
 
-    override def hashCode(): Int = Objects.hash(classOf[Engineer], name, maxHp, defense)
+  override def hashCode(): Int =
+    Objects.hash(classOf[Engineer], name, maxHp, defense)
+
+  override def toString: String = s"Engineer { " +
+    s"name: '$name', " +
+    s"maxHp: $maxHp, " +
+    s"defense=$defense " +
+    s"}"
 }
