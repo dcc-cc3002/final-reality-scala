@@ -41,4 +41,13 @@ abstract class AbstractPlayerCharacter(
   override def equip(weapon: Weapon): Unit = {
     _equippedWeapon = weapon
   }
+
+  override def equals(obj: Any): Boolean = obj match {
+    case that: AbstractPlayerCharacter =>
+      hashCode() == that.hashCode() &&
+        name == that.name &&
+        maxHp == that.maxHp &&
+        defense == that.defense
+    case _ => false
+  }
 }
