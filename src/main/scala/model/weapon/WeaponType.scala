@@ -8,12 +8,11 @@
 package cl.uchile.dcc.finalreality
 package model.weapon
 
-/**
- * Enumeration of all the weapon types.
- *
- * @author Ignacio Slater Muñoz.
- * @author <Your name>
- */
+/** Enumeration of all the weapon types.
+  *
+  * @author Ignacio Slater Muñoz.
+  * @author ~Your name here~.
+  */
 object WeaponType extends Enumeration {
   type WeaponType = Value
   val SWORD, AXE, KNIFE, STAFF, BOW = Value

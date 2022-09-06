@@ -26,7 +26,7 @@ import java.util.concurrent.BlockingQueue
   *   the character's defense
   * @param turnsQueue
   *   the queue with the characters waiting for their turn
- *
+  *
   * @author <a href="https://github.com/r8vnhill">R8V</a>
   * @author ~Your name~
   */
@@ -44,7 +44,7 @@ class BlackMage(
   def currentMp: Int = _currentMp
 
   /** Sets the current MP to `newMp`.
-    *  The value of `newMp` must be between 0 and the `maxMp`.
+    * The value of `newMp` must be between 0 and the `maxMp`.
     */
   def currentMp_=(newMp: Int): Unit = {
     _currentMp = Require.Stat(newMp, "Current MP") in Range(0, maxMp)
@@ -52,11 +52,8 @@ class BlackMage(
 
   override def equals(obj: Any): Boolean = obj match {
     case that: BlackMage =>
-      hashCode() == that.hashCode() &&
-        name == that.name &&
-        maxHp == that.maxHp &&
-        maxMp == that.maxMp &&
-        defense == that.defense
+      super.equals(that) &&
+        maxMp == that.maxMp
     case _ => false
   }
 

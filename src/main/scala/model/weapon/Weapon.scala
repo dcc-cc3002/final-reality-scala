@@ -12,28 +12,35 @@ import model.weapon.WeaponType.WeaponType
 
 import java.util.Objects
 
-/**
- * A class that holds all the information of a weapon.
- *
- * @constructor Creates a weapon with a name, a base damage, speed and it's type.
- * @author Ignacio Slater Muñoz.
- * @author <YOUR NAME HERE>
- */
-class Weapon(val name: String, val damage: Int, val weight: Int, val weaponType: WeaponType) {
+/** A class that holds all the information of a weapon.
+  *
+  * @constructor Creates a weapon with a name, a base damage, speed and it's type.
+  * @author Ignacio Slater Muñoz.
+  * @author ~Your name here~.
+  */
+class Weapon(
+    val name: String,
+    val damage: Int,
+    val weight: Int,
+    val weaponType: WeaponType
+) {
+  override def equals(o: Any): Boolean = o match {
+    case that: Weapon =>
+      hashCode() == that.hashCode() &&
+        name == that.name &&
+        damage == that.damage &&
+        weight == that.weight &&
+        weaponType == that.weaponType
+    case _ => false
+  }
 
-//  override def equals(o: Any): Boolean = {
-//    if (this eq o) {
-//      return true
-//    }
-//    if (!((o.isInstanceOf[Weapon]))) {
-//      return false
-//    }
-//    val weapon: Weapon = o.asInstanceOf[Weapon]
-//    return getDamage == weapon.getDamage && getWeight == weapon.getWeight && getName == weapon
-//      .getName && (getType eq weapon.getType)
-//  }
-//
-//  override def hashCode: Int = {
-//    return Objects.hash(getName, getDamage, getWeight, getType)
-//  }
+  override def hashCode(): Int =
+    Objects.hash(classOf[Weapon], name, damage, weight, weaponType)
+
+  override def toString: String = s"Weapon {" +
+    s"name: $name, " +
+    s"damage: $damage, " +
+    s"weight: $weight, " +
+    s"type: $weaponType" +
+    s"}"
 }

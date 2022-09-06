@@ -51,6 +51,7 @@ abstract class AbstractCharacter(
 
   override def waitTurn(): Unit = {
     scheduledExecutor = Executors.newSingleThreadScheduledExecutor
+    //noinspection TypeCheckCanBeMatch
     if (this.isInstanceOf[PlayerCharacter])
       scheduledExecutor.schedule(
         addToQueue,
