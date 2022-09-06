@@ -1,0 +1,12 @@
+#parse("File Header.java")
+
+#if ((${PACKAGE_NAME} && ${PACKAGE_NAME} != ""))package ${PACKAGE_NAME} #end
+
+/**
+ *
+ * @author <a href="https://github.com/r8vnhill">R8V</a>
+ * @author ~Your name~
+ */
+package object ${PACKAGE_SIMPLE_NAME} {
+
+}
