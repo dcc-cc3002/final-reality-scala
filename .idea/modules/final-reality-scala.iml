@@ -12,9 +12,12 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="sbt: com.typesafe.akka:akka-actor_2.13:2.6.19:jar" level="project" />
-    <orderEntry type="library" name="sbt: com.typesafe:config:1.4.2:jar" level="project" />
-    <orderEntry type="library" name="sbt: org.scala-lang.modules:scala-java8-compat_2.13:1.0.0:jar" level="project" />
+    <orderEntry type="library" name="sbt: com.beautiful-scala:scalastyle_2.13:1.5.1:jar" level="project" />
+    <orderEntry type="library" name="sbt: com.typesafe:config:1.4.1:jar" level="project" />
+    <orderEntry type="library" name="sbt: org.scala-lang.modules:scala-collection-compat_2.13:2.5.0:jar" level="project" />
+    <orderEntry type="library" name="sbt: org.scala-lang.modules:scala-parser-combinators_2.13:1.1.2:jar" level="project" />
+    <orderEntry type="library" name="sbt: org.scala-lang.modules:scala-xml_2.13:1.2.0:jar" level="project" />
     <orderEntry type="library" name="sbt: org.scala-lang:scala-library:2.13.8:jar" level="project" />
+    <orderEntry type="library" name="sbt: org.scalariform:scalariform_2.13:0.2.10:jar" level="project" />
   </component>
 </module>

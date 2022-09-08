@@ -14,20 +14,20 @@ import java.util.Objects
 import java.util.concurrent.BlockingQueue
 
 /** A `Thief` is a type of [[PlayerCharacter]] that can equip `Sword`s, `Knife`s and `Bow`s.
-  *
-  * @param name
-  *   the character's name
-  * @param maxHp
-  *   the character's maximum health points
-  * @param defense
-  *   the character's defense
-  * @param turnsQueue
-  *   the queue with the characters waiting for their turn
-  * @constructor Creates a new Thief.
-  *
-  * @author <a href="https://github.com/r8vnhill">R8V</a>
-  * @author ~Your name~
-  */
+ *
+ * @param name
+ *   the character's name
+ * @param maxHp
+ *   the character's maximum health points
+ * @param defense
+ *   the character's defense
+ * @param turnsQueue
+ *   the queue with the characters waiting for their turn
+ * @constructor Creates a new Thief.
+ *
+ * @author <a href="https://github.com/r8vnhill">R8V</a>
+ * @author ~Your name~
+ */
 class Thief(
     name: String,
     maxHp: Int,
